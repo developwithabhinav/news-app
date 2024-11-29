@@ -1,8 +1,9 @@
-<h1>Login</h1>
-<form action="/auth/login" method="POST">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required />
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required />
-  <button type="submit">Login</button>
-</form>
+<main>
+  <h1>Add News</h1>
+  <form action="/news/add" method="POST">
+    <input type="text" id="title" name="title" placeholder="Enter Title" required>
+    <textarea id="content" placeholder="Enter Content" name="content" rows="1" required></textarea>
+    <input type="text" id="author" placeholder="Author Name" name="author" required>
+    <button type="submit">Add</button>
+  </form>
+</main>
