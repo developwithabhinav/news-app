@@ -1,0 +1,15 @@
+<h1>News</h1>
+<a href="/news/add">Add News</a>
+<ul>
+  {{#each news}}
+    <li>
+      <h2>{{this.title}}</h2>
+      <p>{{this.content}}</p>
+      <small>By {{this.author}}</small>
+      <a href="/news/edit/{{this._id}}">Edit</a>
+      <form action="/news/delete/{{this._id}}" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
