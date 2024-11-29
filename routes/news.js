@@ -1,36 +1,39 @@
 const express = require('express');
 const router = express.Router();
 const News = require('../models/News');
+const { ensureAuthenticated } = require('../middleware/auth'); // Import the middleware
 
-// Display all news
+// Public - Display all news
 router.get('/', async (req, res) => {
   const newsList = await News.find();
   res.render('news/index', { news: newsList });
 });
 
-// Add a news article
-router.get('/add', (req, res) => res.render('news/add'));
+// Protected - Add news (only authenticated users)
+router.get('/add', ensureAuthenticated, (req, res) => {
+  res.render('news/add');
+});
 
-router.post('/add', async (req, res) => {
+router.post('/add', ensureAuthenticated, async (req, res) => {
   const { title, content, author } = req.body;
   await News.create({ title, content, author });
   res.redirect('/news');
 });
 
-// Edit news article
-router.get('/edit/:id', async (req, res) => {
+// Protected - Edit news
+router.get('/edit/:id', ensureAuthenticated, async (req, res) => {
   const newsItem = await News.findById(req.params.id);
   res.render('news/edit', { news: newsItem });
 });
 
-router.post('/edit/:id', async (req, res) => {
+router.post('/edit/:id', ensureAuthenticated, async (req, res) => {
   const { title, content, author } = req.body;
   await News.findByIdAndUpdate(req.params.id, { title, content, author });
   res.redirect('/news');
 });
 
-// Delete a news article
-router.post('/delete/:id', async (req, res) => {
+// Protected - Delete news
+router.post('/delete/:id', ensureAuthenticated, async (req, res) => {
   await News.findByIdAndDelete(req.params.id);
   res.redirect('/news');
 });

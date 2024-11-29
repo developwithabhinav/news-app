@@ -1,8 +1,74 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Rubik+Mono+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Parkinsans:wght@300..800&family=Rubik+Mono+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
 }
 
-a {
-  color: #00B7FF;
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-primary: #0a3d62;
+    --color-secondary: #f6b93b;
+    --color-accent: #cc7307;
+}
+
+body {
+    font-size: 2.5rem;
+}
+
+header {
+    background: var(--color-primary);
+    padding: 1rem 4rem;
+}
+
+/* NavBar */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-logo {
+    font-family: "Barriecito", system-ui;
+    font-size: 4.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    margin-right: 2.5rem;
+    padding: 0 1rem;
+    padding-top: 0;
+    cursor: pointer;
+    background: var(--color-secondary);
+    border: 0.5rem solid var(--color-accent);
+    border-bottom-color: #ab580a;
+    border-top: 0px;
+    border-right: 0px;
+}
+
+li a {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1.75rem;
+}
+
+li:active {
+    border: 0;
+    
 }
