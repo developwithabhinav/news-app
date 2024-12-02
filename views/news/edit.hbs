@@ -1,44 +1,37 @@
 <main>
-  <h1>Edit News</h1>
-  <form action="/news/{{_id}}?_method=PUT" method="POST">
-    <div>
-      <input
-        type="text"
-        id="title"
-        name="title"
-        value="{{title}}"
-        placeholder="Enter news title"
-        required
-      />
-    </div>
-    <div>
-      <textarea
-        id="content"
-        name="content"
-        placeholder="Enter news content"
-        required
-      >{{content}}</textarea>
-    </div>
-    <div>
-      <input
+    <h1>Edit News</h1>
+    <form action="/news/edit/{{news._id}}" method="POST">
+        <input type="hidden" name="_method" value="PUT" />
+        <input
+            type="text"
+            id="title"
+            name="title"
+            value="{{title}}"
+            placeholder="New Title"
+            required
+        />
+        <textarea
+            id="content"
+            name="content"
+            placeholder="Updated Content"
+            required
+        >{{content}}</textarea>
+        <input
         type="text"
         id="author"
         name="author"
         value="{{author}}"
-        placeholder="Enter author name"
+        placeholder="Author name"
         required
-      />
-    </div>
-    <div>
-      <input
+        />
+        <input
         type="url"
         id="weblink"
         name="weblink"
         value="{{weblink}}"
-        placeholder="Enter a valid URL"
+        placeholder="News Link"
         required
-      />
-    </div>
-    <button type="submit">Save</button>
-  </form>
+        />
+        <button type="submit">Save</button>
+    </form>
 </main>

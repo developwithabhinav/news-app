@@ -150,8 +150,9 @@ button:active {
 textarea {
     max-width: 35rem;
     min-width: 35rem;
+    height: 2.75rem;
     max-height: 20rem;
-    min-height: 2.5rem;
+    min-height: 2.75rem;
 }
 
 /* Footer */

@@ -3,19 +3,19 @@
   <ul class="news-view">
     {{#each news}}
       <li class="news">
-        <img src="images/notfound.jpg">
+        <img src="/images/notfound.jpg">
         <div class="news-content">
           <h2 class="news-title">{{this.title}}</h2>
           <p class="news-description">{{this.content}}...</p>
           <small class="news-author">By {{this.author}}</small>
           <form action="/news/delete/{{this._id}}" method="POST">
             <button type="submit" class="post-delete">
-              <img alt="delete" src="images/delete.png">
+              <img alt="delete" src="/images/delete.png">
             </button>
           </form>
           <a href="/news/edit/{{this._id}}" method="POST">
             <button type="submit" class="post-delete" id="post-edit">
-              <img alt="delete" src="images/edit.png">
+              <img alt="delete" src="/images/edit.png">
             </button>
           </form>
           <a href={{this.weblink}}><button class="news-button" type="submit">Read</button></a>
