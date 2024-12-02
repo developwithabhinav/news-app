@@ -6,6 +6,9 @@ const { ensureAuthenticated } = require('../middleware/auth'); // Import the mid
 // Public - Display all news
 router.get('/', async (req, res) => {
   const newsList = await News.find();
+  const randomNumber = Math.floor(Math.random() * 12) + 1;
+  let imageString = '/images/news' + randomNumber + '.jpg';
+  newsList[0].image = imageString;
   res.render('news/index', { news: newsList });
 });
 
