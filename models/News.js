@@ -6,6 +6,7 @@ const NewsSchema = new Schema({
   content: { type: String, required: true },
   author: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
+  weblink: {type: String, required: true},
 });
 
 module.exports = mongoose.model('News', NewsSchema);

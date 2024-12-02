@@ -24,6 +24,11 @@ html {
     color: var(--color-primary);
 }
 
+img::selection {
+    background: none;
+    color: none;
+}
+
 body {
     font-size: 2.5rem;
 }
@@ -162,6 +167,10 @@ footer a {
     color: var(--color-secondary);
 }
 
+footer a:hover {
+    color: var(--color-accent);
+}
+
 /* News */
 .news-view {
     max-width: 90%;
@@ -202,6 +211,7 @@ footer a {
 .news-description {
     font-size: 1.5rem;
     text-align: center;
+    text-transform: none;
 }
 
 .news-author {
@@ -216,6 +226,7 @@ footer a {
     font-size: 1.25rem;
     text-align: right;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 .news-button {
@@ -226,8 +237,41 @@ footer a {
     border-bottom-color: #ab580a;
     border-top: none;
     border-right: none;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
 }
 
 .news a {
     display: inline;
+}
+
+.news .post-delete {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    background: var(--color-secondary);
+    width: 4rem;
+    transition: all 0.35s ease;
+}
+
+.news .post-delete:hover {
+    background: var(--color-accent);
+}
+
+.post-delete img {
+    height: 3rem;
+    width: 3rem;
+}
+
+#post-edit {
+    position: absolute;
+    top: 0rem;
+    left: 4rem;
+    background: gray;
+}
+
+#post-edit:hover {
+    background: silver;
 }
