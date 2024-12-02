@@ -5,5 +5,5 @@ function ensureAuthenticated(req, res, next) {
     res.redirect('/auth/login'); // Redirect to login if not authenticated
   }
   
-  module.exports = { ensureAuthenticated };
+module.exports = { ensureAuthenticated };
   

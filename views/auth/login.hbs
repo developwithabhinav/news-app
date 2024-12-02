@@ -1,8 +1,12 @@
+<head>
+  <title>Login to your Account</title>
+</head>
 <main>
   <h1>Login</h1>
   <form class="registerlogin" action="/auth/login" method="POST">
     <input type="text" id="username" name="username" placeholder="Select Username" required />
     <input type="password" id="password" name="password" placeholder="Choose Password" ="password" required />
     <button type="submit">Login</button>
+    {{message}}
   </form>
 </main>
