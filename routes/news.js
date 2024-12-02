@@ -7,8 +7,6 @@ const { ensureAuthenticated } = require('../middleware/auth'); // Import the mid
 router.get('/', async (req, res) => {
   const newsList = await News.find();
   const randomNumber = Math.floor(Math.random() * 12) + 1;
-  let imageString = '/images/news' + randomNumber + '.jpg';
-  newsList[0].image = imageString;
   res.render('news/index', { news: newsList });
 });
 
@@ -20,7 +18,10 @@ router.get('/add', ensureAuthenticated, (req, res) => {
 router.post('/add', ensureAuthenticated, async (req, res) => {
   let { title, content, author, weblink } = req.body;
   content = content.slice(0, 128);
-  await News.create({ title, content, author, weblink });
+  const randomNumber = Math.floor(Math.random() * 12) + 1;
+  let image = '/images/news' + randomNumber + '.jpg';
+  let objectToCreate = { title, content, author, weblink, image }
+  await News.create(objectToCreate);
   res.redirect('/news');
 });
 

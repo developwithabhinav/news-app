@@ -6,7 +6,11 @@
   <form class="registerlogin" action="/auth/login" method="POST">
     <input type="text" id="username" name="username" placeholder="Select Username" required />
     <input type="password" id="password" name="password" placeholder="Choose Password" ="password" required />
-    <button type="submit">Login</button>
-    {{message}}
+    <span class="login-buttons">
+      <button type="submit">Login</button>
+    </span>
   </form>
+  <a href="/api/auth">
+    <button id="github-button" type="submit">GitHub</button>
+  </a>
 </main>

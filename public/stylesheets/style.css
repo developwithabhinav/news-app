@@ -276,3 +276,15 @@ footer a:hover {
 #post-edit:hover {
     background: silver;
 }
+
+.login-buttons button {
+    display: inline;
+}
+
+#github-button {
+    display: inline;
+    border-left-color: #24292e;
+    border-bottom-color: #676b6f;
+    background: #14bc3b;
+    color: white;
+}
