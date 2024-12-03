@@ -1,3 +1,4 @@
+// Authentication Function
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
       return next(); // Proceed to the next middleware/route handler if authenticated

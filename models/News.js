@@ -1,3 +1,5 @@
+// Model for News 
+// Used for Validation
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 

@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Parkinsans:wght@300..800&family=Rubik+Mono+One&display=swap');
 
+/* ROOT Level */
 * {
     padding: 0;
     margin: 0;
@@ -9,10 +10,12 @@
     font-family: "Parkinsans", sans-serif;
 }
 
+/* HTML */
 html {
     font-size: 62.5%;
 }
 
+/* ROOT */
 :root {
     --color-primary: #0a3d62;
     --color-secondary: #f6b93b;
@@ -106,6 +109,8 @@ main {
     min-height: 79.1vh;
     margin: 3rem 5rem;
 }
+
+/* FORM */
 
 main form {
     display: flex;

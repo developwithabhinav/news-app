@@ -1,3 +1,5 @@
+// Model for User Credentials 
+// Used for Validation
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
